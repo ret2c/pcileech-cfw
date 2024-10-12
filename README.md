@@ -4,10 +4,27 @@
 ❗ Forked and modified from [Ulf Frisk's PCIeSquirrel base](https://github.com/ufrisk/pcileech-fpga/tree/master/PCIeSquirrel)
 
 CFW dump from Vivado created for DMA research against kernel-level AC<br>
-FW created based off DID, VID, Class Code, and BAR(x) from Etron EJ168A PCI-e card
+FW created based off DID, VID, Class Code, Status, Command, and RID from Etron EJ168A PCI-e card<br>
+BAR(0-5) overwrote after filling respective fields and writing DWORD @ offset `010h`
 
 CFW located at: *pcileech_squirrel -> pcileech_squirrel.runs -> impl_1 ->* **pcileech_squirrel_top.bin**
 
+### BAR x M.P.S. x FW
+```ASM
+- BAR0 → 0xFFFF8004 ; 64-bit
+- BAR1 → 0xFFFFFFFF
+- BAR2 → NOT_USED (0x00000000)
+- BAR3 → NOT_USED (0x00000000)
+- BAR4 → NOT_USED (0x00000000)
+- BAR5 → NOT_USED (0x00000000)
+```
+
+MAX_PAYLOAD_SIZE:
+```asm
+parameter ( 3'b011 )
+```
+
+XXD / FW:
 ```bash
 $ xxd pcileech_squirrel_top.bin | head
 00000000: ffff ffff ffff ffff ffff ffff ffff ffff  ................
