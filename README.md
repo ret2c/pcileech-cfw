@@ -9,7 +9,6 @@ BAR(0-5) overwrote after filling respective fields and writing DWORD @ offset `0
 
 CFW located at: *pcileech_squirrel -> pcileech_squirrel.runs -> impl_1 ->* **pcileech_squirrel_top.bin**
 
-### BAR x M.P.S. x FW
 ```ASM
 - BAR0 → 0xFFFF8004 ; 64-bit
 - BAR1 → 0xFFFFFFFF
