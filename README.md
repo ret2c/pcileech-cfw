@@ -1,4 +1,6 @@
 # CFW for LeetDMA v1.2 Card
+**01/24/2025**: This is a pretty useless repo in its current state. Created through Simon Rak's guide and has no customization. I'll drop the TeleScan output and an mmiotrace here in April 2025 for anybody who wants to burn through this card
+
 **10/12/2024**: Initial upload, fully-vetted CFW will be uploaded sometime in April 2025
 
 ❗ Forked and modified from [Ulf Frisk's PCIeSquirrel base](https://github.com/ufrisk/pcileech-fpga/tree/master/PCIeSquirrel)
